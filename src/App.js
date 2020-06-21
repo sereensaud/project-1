@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
+import Child from './child';
+import Reducer from './reducer';
 
 function App() {
+  let  countState = useState(1)
   return (
-    <div className="App">
-     
+    <Reducer.Provider value={countstate}>
+    <div>
+     <Child/>
     </div>
+    </Reducer.Provider>
   );
 }
 
