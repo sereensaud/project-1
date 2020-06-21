@@ -25,20 +25,20 @@ export const AddTransaction = () => {
              <h3>Add new transaction</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
-                <label>Name</label>
+                <label style={{fontWeight: 200 }}>Name</label>
                     <input required type="text" value={text} onChange={
                         (e) => setText(e.target.value)
                     }/>
                    
                 </div>
-                <div style={{marginTop: 20}} className="form-control">
-                <label>Amount(+ for Income & - for Expense)</label>
+                <div style={{marginTop: 10}} className="form-control">
+                <label style={{fontWeight: 200 }}>Amount(+ for Income & - for Expense)</label>
                     <input required type="number" value={amount} onChange={
                         (e) => setAmount(e.target.value)
                     } />
                     
                 </div>
-                <button style={{marginTop: 20}} className="button dark">Add transaction</button>
+                <button style={{marginTop: 20,fontWeight: 200 }} className="button dark">Add transaction</button>
             </form>
         </div>
     )
