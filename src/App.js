@@ -1,16 +1,31 @@
-import React, {useState} from 'react';
 import './App.css';
-import Child from './child';
-import Reducer from './reducer';
+import React from 'react';
+import {Header} from './components/Header'
+import {Balance} from './components/Balance'
+import {IncomeExpenses} from './components/IncomeExpenses'
+import {TransactionList} from './components/TransactionList'
+import {AddTransaction} from './components/AddTransaction'
+
+import {GlobalProvider} from './context/GlobalState'
 
 function App() {
-  let  countState = useState(1)
   return (
-    <Reducer.Provider value={countstate}>
-    <div>
-     <Child/>
-    </div>
-    </Reducer.Provider>
+    <GlobalProvider> 
+      <Header />
+      <div class="container">
+        <div className="">
+          <div className=" borderright">
+            <Balance/>
+            <IncomeExpenses/>
+            <TransactionList/>
+          </div>
+          <div className="">
+            <AddTransaction/>
+          </div>
+        </div>
+      </div>
+    </GlobalProvider>
+
   );
 }
 
